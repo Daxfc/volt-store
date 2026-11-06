@@ -26,7 +26,6 @@ import voltBlack from './assets/blackVolt.png';
 import voltWhite from './assets/whiteVolt.png';
 import utFlag from './assets/utFlag.png';
 import italyFlag from './assets/italyFlag.png';
-import Empty from './assets/empty.png';
 
 import Shop from './components/Shop';
 import Search from './components/Search';

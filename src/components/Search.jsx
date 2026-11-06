@@ -3,7 +3,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faXmark, faCartPlus, faBolt } from '@fortawesome/free-solid-svg-icons';
 import { client, urlFor } from '../sanity';
-import Empty from '../assets/empty.png';
 import './Shop.css';
 
 export default function Search({ onAddToCart, setCartItems, onOpenProduct, isDiscountApplied, lang }) {

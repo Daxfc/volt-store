@@ -10,7 +10,6 @@ import {
   faChevronLeft 
 } from '@fortawesome/free-solid-svg-icons';
 import { client, urlFor } from '../sanity';
-import Empty from '../assets/empty.png';
 import './Shop.css';
 
 export default function Shop({ setSearchActive, onAddToCart, setCartItems, onOpenProduct, autoFocusTrigger, isDiscountApplied, lang, onTriggerLoading }) {
