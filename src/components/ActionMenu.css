@@ -1,0 +1,240 @@
+.action-menu-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 10500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-fab-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0066ff, #00c6ff);
+  color: #ffffff;
+  border: none;
+  font-size: 20px;
+  cursor: default;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-fab-btn .fab-plus-icon {
+  transition: transform 0.25s ease;
+}
+
+.action-fab-btn.open .fab-plus-icon {
+  transform: rotate(45deg);
+}
+
+.action-popup-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideUpPopup 0.2s ease forwards;
+}
+
+.action-popup-options.closing {
+  animation: slideDownPopup 0.2s ease forwards;
+}
+
+.action-popup-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0066ff;
+  border: 1px solid #e2e8f0;
+  font-size: 16px;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.action-popup-btn:hover {
+  background: #f8fafc;
+}
+
+.app-container.dark-mode .action-popup-btn {
+  background: #1e293b;
+  color: #00c6ff;
+  border-color: #334155;
+}
+
+.app-container.dark-mode .action-popup-btn:hover {
+  background: #334155;
+}
+
+.promo-modal-card {
+  width: 90%;
+  max-width: 380px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 16px;
+  animation: scaleUpAI 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.app-container.dark-mode .promo-modal-card {
+  background: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+.promo-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #f1f5f9;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: default;
+  transition: background 0.15s, color 0.15s;
+}
+
+.app-container.dark-mode .promo-close-btn {
+  background: #334155;
+  color: #94a3b8;
+}
+
+.promo-close-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.app-container.dark-mode .promo-close-btn:hover {
+  background: #475569;
+  color: #f8fafc;
+}
+
+.promo-header-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.promo-header-center h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.app-container.dark-mode .promo-header-center h3 {
+  color: #f8fafc;
+}
+
+.promo-header-center p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.app-container.dark-mode .promo-header-center p {
+  color: #94a3b8;
+}
+
+.redeem-input-field {
+  width: 100%;
+  height: 44px;
+  padding: 0 14px;
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.app-container.dark-mode .redeem-input-field {
+  background: #0f172a;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.redeem-input-field:focus {
+  border-color: #0066ff;
+  background: #ffffff;
+}
+
+.app-container.dark-mode .redeem-input-field:focus {
+  background: #1e293b;
+}
+
+.redeem-input-field.error-border {
+  border-color: #ef4444 !important;
+}
+
+.redeem-submit-btn {
+  height: 44px;
+  background: linear-gradient(135deg, #0066ff, #00c6ff);
+  border: none;
+  color: #ffffff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.redeem-submit-btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.redeem-msg-text {
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.redeem-msg-text.success {
+  color: #10b981;
+}
+
+.redeem-msg-text.error {
+  color: #ef4444;
+}
+
+@keyframes slideUpPopup {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownPopup {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
